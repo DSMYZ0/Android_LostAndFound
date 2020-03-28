@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.qin.fragment.MineFragment">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:id="@+id/mineLayout"
+                  android:layout_height="200dp"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:background="@color/colorPrimary">
+
+        <ImageView android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:id="@+id/profilePictureImageView"
+                   android:src="@mipmap/ic_launcher">
+        </ImageView>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/mineTextView"
+                  android:textSize="20sp"
+                  android:gravity="center"
+                  android:text="@string/username">
+        </TextView>
+    </LinearLayout>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/myPostButton" android:text="我的发布"
+            android:layout_below="@+id/mineLayout" android:layout_marginTop="30dp"></Button>
+    <Button android:layout_width="match_parent"
+            android:layout_below="@+id/modifyProdileButton"
+            android:layout_height="wrap_content"
+            android:text="退出登录"
+            android:layout_marginTop="20dp"
+            android:id="@+id/logoutButton"></Button>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/modifyProdileButton" android:text="修改信息"
+            android:layout_below="@+id/myPostButton" android:layout_marginTop="20dp"></Button>
+</RelativeLayout>
