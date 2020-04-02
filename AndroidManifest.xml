@@ -15,21 +15,31 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name="com.qin.ProfileActivity">
-
-        </activity>
-
-        <activity android:name="com.qin.HomeActivity">
-        </activity>
-
-        <activity android:name="com.qin.LoginActivity">
+        <activity android:name="com.qin.CameraActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.qin.ProfileActivity">
+        </activity>
+        <activity android:name="com.qin.HomeActivity">
 
+        </activity>
+        <activity android:name="com.qin.LoginActivity">
+
+        </activity>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="com.qin.fileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/filepaths"/>
+        </provider>
     </application>
 
 </manifest>
