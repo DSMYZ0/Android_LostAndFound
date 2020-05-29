@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item id="1">钥匙/U盘</item>
+        <item id="2">手机/现金</item>
+        <item id="3">书籍/文具</item>
+        <item id="4">证件/背包</item>
+        <item id="5">眼镜/衣物</item>
+        <item id="6">其它</item>
+    </string-array>
+</resources>

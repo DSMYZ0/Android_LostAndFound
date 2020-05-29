@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--Non focused states-->
+<item android:state_pressed="true" android:state_selected="true" android:state_focused="true" android:color="#eb4f38" />
+<item android:state_pressed="false" android:state_selected="true" android:state_focused="false" android:color="#eb4f38" />
+<!--Focused states-->
+<item android:state_pressed="false" android:state_selected="false" android:state_focused="true" android:color="#eb4f38" />
+<item android:state_pressed="false" android:state_selected="true" android:state_focused="true" android:color="#eb4f38" />
+<!--Pressed-->
+<item android:state_pressed="true" android:state_selected="true"  android:color="#eb4f38" />
+<item android:state_pressed="true" android:color="#888888" />
+<item android:color="#888888" />
+
+</selector>

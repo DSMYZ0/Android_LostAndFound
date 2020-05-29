@@ -92,7 +92,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
 
-        OkHttpUtils.get("http://192.168.137.1:8089/portal/user/update?contact=" + contact + passwordUrl + password, new OkHttpCallback() {
+        OkHttpUtils.get("http://47.105.143.99:8089/portal/user/update?contact=" + contact + passwordUrl + password, new OkHttpCallback() {
             @Override
             public void onFinish(String status, String msg) {
                 super.onFinish(status, msg);

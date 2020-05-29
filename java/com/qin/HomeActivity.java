@@ -3,6 +3,7 @@ package com.qin;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,9 @@ import com.qin.fragment.MineFragment;
 import com.qin.fragment.PostFragment;
 import com.qin.lafapplication.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -23,6 +27,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     ImageView imageViewSquare;
     ImageView imageViewPost;
     ImageView imageViewMine;
+    TextView textViewSqure;
+    TextView textViewPost;
+    TextView textViewMine;
+
+    List<TextView> textViewList=new ArrayList<>();
 
     public static final String GROUNDFRAGMENT_TAG="GROUND";
     public static final String POSTFRAGMENT_TAG="POST";
@@ -40,10 +49,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         imageViewSquare=findViewById(R.id.squareImage);
         imageViewPost=findViewById(R.id.postImage);
         imageViewMine=findViewById(R.id.mineImage);
+        textViewSqure=findViewById(R.id.squareText);
+        textViewPost=findViewById(R.id.postText);
+        textViewMine=findViewById(R.id.mineText);
+
+        textViewList.add(textViewSqure);
+        textViewList.add(textViewPost);
+        textViewList.add(textViewMine);
 
         linearLayoutSquare.setOnClickListener(this);
         linearLayoutPost.setOnClickListener(this);
         linearLayoutMine.setOnClickListener(this);
+
+        attachFragment(GROUNDFRAGMENT_TAG);
 
     }
 
@@ -52,20 +70,32 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.square:attachFragment(GROUNDFRAGMENT_TAG);
+                setTextViewState(R.id.squareText);
                 imageViewSquare.setImageResource(R.mipmap.square);
                 imageViewPost.setImageResource(R.mipmap.post_u);
                 imageViewMine.setImageResource(R.mipmap.mine_u);
                 break;
             case R.id.post:attachFragment(POSTFRAGMENT_TAG);
+                setTextViewState(R.id.postText);
                 imageViewPost.setImageResource(R.mipmap.post);
                 imageViewSquare.setImageResource(R.mipmap.square_u);
                 imageViewMine.setImageResource(R.mipmap.mine_u);
                 break;
             case R.id.mine:attachFragment(MINEFRAGMENT_TAG);
+                setTextViewState(R.id.mineText);
                 imageViewMine.setImageResource(R.mipmap.mine);
                 imageViewSquare.setImageResource(R.mipmap.square_u);
                 imageViewPost.setImageResource(R.mipmap.post_u);
                 break;
+        }
+    }
+
+    public void setTextViewState(int id){
+        for(TextView textView:textViewList){
+            if(textView.getId()==id)
+                textView.setSelected(true);
+            else
+                textView.setSelected(false);
         }
     }
 

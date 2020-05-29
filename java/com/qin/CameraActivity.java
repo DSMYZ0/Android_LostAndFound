@@ -63,7 +63,7 @@ public class CameraActivity extends AppCompatActivity {
                 imageViewCamera.setImageBitmap(bitmap);
 
                 file=bitmap2File(bitmap);
-                OkHttpUtils.upload("http://192.168.137.1:8089/uploadImage",file.getAbsolutePath(),new OkHttpCallback(){
+                OkHttpUtils.upload("http://47.105.143.99:8089/uploadImage",file.getAbsolutePath(),new OkHttpCallback(){
                     @Override
                     public void onFinish(String status, String msg) {
                         super.onFinish(status, msg);

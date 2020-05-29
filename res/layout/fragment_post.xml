@@ -5,9 +5,86 @@
              tools:context="com.qin.fragment.PostFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="post"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="取消" android:layout_marginLeft="20dp"
+                      android:textSize="25sp" android:id="@+id/cancelText"
+                      android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="30dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                      android:text="标题:" android:layout_marginLeft="20dp"
+                      android:textSize="25sp" android:layout_weight="1"/>
+            <EditText
+                    android:id="@+id/titleEdit" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="5"
+                    android:singleLine="true" android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:layout_marginTop="20dp">
+            <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginLeft="20dp"
+                        android:id="@+id/lofRadioGroup">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:text="失物招领" android:layout_weight="1"
+                             android:textSize="17sp" android:id="@+id/lostRadioButton"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:text="寻物启事" android:layout_weight="1"
+                             android:textSize="17sp" android:id="@+id/foundRadioButton"/>
+            </RadioGroup>
+            <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginLeft="20dp"
+                        android:id="@+id/addressRadioGroup">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:text="南校" android:layout_weight="1"
+                             android:textSize="17sp" android:id="@+id/southRadioButton"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:text="北校" android:layout_weight="1"
+                             android:textSize="17sp" android:id="@+id/northRadioButton"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                      android:text="分类" android:layout_weight="1"
+                      android:textSize="25sp" android:layout_marginLeft="20dp"
+                      android:id="@+id/categoryTextView"/>
+            <Spinner android:layout_width="0dp" android:layout_height="wrap_content"
+                     android:layout_weight="1" android:id="@+id/categoeySpinner"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp">
+            <Button android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:id="@+id/dateButton" android:text="选择日期"
+                    android:layout_marginLeft="20dp" android:layout_weight="1"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                      android:id="@+id/dateText" android:layout_weight="2"
+                      android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp">
+            <EditText android:layout_width="match_parent" android:layout_height="120dp"
+                      android:background="@drawable/edittext_focused" android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp" android:text="描述说明..."
+                      android:textColor="#c4c4c4" android:id="@+id/detailEditText"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="100dp" android:layout_height="100dp"
+                       android:id="@+id/photoImageView" android:layout_marginLeft="20dp"
+                       android:src="@mipmap/addpicture" android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <Button android:layout_width="300dp" android:layout_height="wrap_content"
+                    android:text="发布" android:layout_gravity="center"
+                    android:layout_marginTop="20dp" android:textSize="30sp"
+                    android:id="@+id/postButton"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

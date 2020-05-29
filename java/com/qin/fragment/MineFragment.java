@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.qin.CameraActivity;
 import com.qin.HomeActivity;
 import com.qin.LoginActivity;
 import com.qin.ProfileActivity;
@@ -60,6 +61,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         }
         else {
             changeView();
+
         }
     }
 
@@ -79,6 +81,9 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent1);
             case R.id.myPostButton:
                 break;
+            case R.id.profilePictureImageView:
+                Intent intent2=new Intent(getActivity(), CameraActivity.class);
+                startActivity(intent2);
         }
     }
 

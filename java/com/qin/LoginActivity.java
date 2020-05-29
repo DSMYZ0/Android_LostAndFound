@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 String password=editText_password.getText().toString();
 //                Toast.makeText(this,username,Toast.LENGTH_LONG).show();
                 //请求接口
-                OkHttpUtils.get("http://192.168.137.1:8089/portal/user/login?username="+username+"&password="+password,
+                OkHttpUtils.get("http://47.105.143.99:8089/portal/user/login?username="+username+"&password="+password,
                         new OkHttpCallback(){
                             @Override
                             public void onFinish(String status, String msg) {
